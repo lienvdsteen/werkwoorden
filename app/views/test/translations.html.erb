@@ -1,0 +1,14 @@
+<div class='translation-section'>
+  <h2>Vertaal <em class='word'><%= @verb.dutch %></em> in het Engels:</h2>
+
+  <div class='text-center'>
+    <%= form_tag(translation_answer_path, method: "post", remote: true) do %>
+      <%= text_field_tag(:answer) %>
+      <%= hidden_field_tag(:verb_id, @verb.id) %>
+      <%= submit_tag("Antwoord", class: 'btn btn-lg btn-success') %>
+      <span class='icon-check'>
+      </span>
+    <% end %>
+  </div>
+  <div class='error-message'></div>
+</div>

@@ -12,15 +12,16 @@
 <body>
 
 <%= render 'shared/navbar' %>
-<div class='content-wrapper'>
-  <%= yield %>
-</div>
+
+<div class="container content-wrapper margin-top-navbar margin-left-10">
+  <div class="jumbotron">
+    <%= yield %>
+  </div>
 
 <div id="verb-modal" class="modal fade">
   <div class="modal-dialog">
     <div id="inner-verb-modal" class="modal-content"></div>
   </div>
 </div>
-
 </body>
 </html>
