@@ -1,0 +1,23 @@
+<%= simple_form_for @verb, remote: true,  html: { class: 'form-horizontal' },
+  wrapper: :horizontal_form,
+  wrapper_mappings: {
+    check_boxes: :horizontal_radio_and_checkboxes,
+    radio_buttons: :horizontal_radio_and_checkboxes,
+    file: :horizontal_file_input,
+    boolean: :horizontal_boolean
+  } do |f| %>
+<div class='modal-body'>
+  <ul class='errors'></ul>
+  <%= f.input :dutch, label: 'Nederlandse vertaling: ' %>
+  <%= f.input :english, label: 'Engelse vertaling: ' %>
+  <%= f.input :ovt_me, label: 'OVT Ik' %>
+  <%= f.input :ovt_you, label: 'OVT Zij' %>
+  <%= f.input :vtt_verb, label: 'VTT werkwoord' %>
+  <%= f.input :vtt_conjugated, label: 'VTT' %>
+  <%= f.input :preposition, label: 'Voorzetsel' %>
+</div>
+
+<div class='modal-footer'>
+  <%= f.button :submit, "Voeg toe!", class: "btn btn-default" %>
+</div>
+<% end %>

@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
 
-  resources :verbs, only: [:index, :create, :update, :destroy]
+  resources :verbs, only: [:index, :create, :new, :update, :destroy]
 end
