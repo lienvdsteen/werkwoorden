@@ -11,9 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150930132832) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "verbs", force: :cascade do |t|
+    t.string   "dutch"
+    t.string   "english"
+    t.string   "preposition"
+    t.string   "ovt_me"
+    t.string   "ovt_you"
+    t.string   "vtt_verb"
+    t.string   "vtt_conjugated"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
 end

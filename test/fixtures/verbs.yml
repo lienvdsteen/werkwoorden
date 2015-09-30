@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dutch: MyString
+  english: MyString
+  preposition: MyString
+  ovt_me: MyString
+  ovt_you: MyString
+  vtt_verb: MyString
+  vtt_conjugated: MyString
+
+two:
+  dutch: MyString
+  english: MyString
+  preposition: MyString
+  ovt_me: MyString
+  ovt_you: MyString
+  vtt_verb: MyString
+  vtt_conjugated: MyString
