@@ -1,6 +1,12 @@
 language: ruby
 rvm:
 - 2.2.3
+before_script:
+  - psql -c 'create database werkwoorden_test;' -U postgres
+test:
+  adapter: postgresql
+  database: werkwoorden_test
+  username: postgres
 deploy:
   provider: heroku
   api_key:
