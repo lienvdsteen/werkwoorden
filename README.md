@@ -5,4 +5,8 @@ To work on this project:
 - `rake db:setup` (will do db:create, db:schema:load, db:seed)
 - `rails s`
 
+To run the tests:
+- `rake db:test:prepare` (so your test database is ready)
+- `rake test`
+
 See Issues for what needs to be added!

@@ -1,0 +1,17 @@
+language: ruby
+rvm:
+- 2.2.3
+before_script:
+  - psql -c 'create database werkwoorden_test;' -U postgres
+test:
+  adapter: postgresql
+  database: werkwoorden_test
+  username: postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: EEsFpPffUzG6t636vhP533UTkrcd46UWJ9uAX8189Z8dE9EX6Tz8dA+voA0xnD9yeatdi04mQF2b9QqiIwQsEHEU+G6HWvdw6q1gD1N8FX9l/45djXUL9cD4i0MOxK+Ike1Cm7V9Y8mr4hscsoENvel/wHt+zRPSwuE34fvUPlA9SeTV9BouCKwmWXiRNvfQO8dNNa5pClcp+WM+yM2K3udT+NJa7LhkbMfNrKMG2di2xBlkD0Z4HRibT5M7T6+apK0dCheybiBEUVzCH4OwF9T3ocOnd7i4E2VnXaDHir/ey1FBHQ5vrAmZYqR6nn1ScHmLlZBeWfk4CMeh1Tpw94RjhGSzN46IgLFhxi0d3ghyZSQjQ+TK4KjIoSDpSCNvCK1pSamTKxZnkz9HO5DoWIo2GM6m5YH/lGkvQpJyRfCCkrWRlUeFXc9Gf/bV6P/rVf8qIHrfyEl0sQqdpXGXt5cAnzGeaMS9KwtDPHdcaBVIy3kqM1ei5p9zDyEI2T0N43ePblfgAQ5tBk1N2se8pjTfVq31zgGe2t692vguI5p7TcDcoWsmS5xYChGlxa8vbXqjh2XUb3tYOz8FsLGs8F2RM3XaVEJ3o/0k+16Iz3B+Gc9uN5ZjW+3kbGsqS5irkMyRUQWjWsj7KrpYt7eydLOdce4Q9p8w69CXBaVyLbA=
+  run: "rake db:migrate"
+  app: werkwoorden-nl
+  on:
+    repo: lienvdsteen/werkwoorden
