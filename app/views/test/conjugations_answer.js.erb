@@ -1,0 +1,22 @@
+<% if @ik_correct && @wij_correct %>
+  $('.icon-check').html('<i class="fa fa-check icon-success"></i>');
+<% else %>
+  $('.icon-check').html('<i class="fa fa-close icon-error"></i>');
+  $('.error-message').html('The correct answer was:');
+  <% if !@ik_correct %>
+    $('.error-message').append(' ik <%= @old_verb.ovt_me %>');
+  <% end %>
+  <% if !@wij_correct %>
+    $('.error-message').append(' wij <%= @old_verb.ovt_you %>');
+  <% end %>
+<% end %>
+setTimeout(fade_out, 2000);
+
+$('.word').text('<%= @verb.dutch %>');
+$('#verb_id').val('<%= @verb.id %>');
+$('#ik_answer').val('');
+$('#wij_answer').val('');
+
+function fade_out() {
+  $('.icon-check').fadeOut().empty();
+}

@@ -1,0 +1,17 @@
+<div class='conjugation-section'>
+  <h2>Vul de juiste OVT (imperfectum) vervoeging voor <em class='word'><%= @verb.dutch %></em>:</h2>
+
+  <div class='text-center'>
+    <%= form_tag(conjugation_answers_path, method: "post", remote: true) do %>
+      <%= label_tag(:ik_answer, "ik") %>
+      <%= text_field_tag(:ik_answer) %>
+      <%= label_tag(:wij_answer, "wij") %>
+      <%= text_field_tag(:wij_answer) %>
+      <%= hidden_field_tag(:verb_id, @verb.id) %>
+      <%= submit_tag("Antwoord", class: 'btn btn-lg btn-success') %>
+      <span class='icon-check'>
+      </span>
+    <% end %>
+  </div>
+  <div class='error-message'></div>
+</div>
