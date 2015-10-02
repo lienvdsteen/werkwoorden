@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   get 'test/random'
   get 'test/translations'
   post 'test/translations_answer', as: 'translation_answer'
-  get 'test/conjunctions'
+  get 'test/conjugations'
+  post 'test/conjugations_answer', as: 'conjugation_answers'
 
   get 'test/add_to_sentence'
 
