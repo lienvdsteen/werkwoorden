@@ -8,6 +8,10 @@ class VerbsController < ApplicationController
 
   def create
     @verb = Verb.create(verb_params)
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js
+    end
   end
 
   def update

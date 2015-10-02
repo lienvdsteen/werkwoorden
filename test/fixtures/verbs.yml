@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  dutch: MyString
-  english: MyString
-  preposition: MyString
-  ovt_me: MyString
-  ovt_you: MyString
-  vtt_verb: MyString
-  vtt_conjugated: MyString
+eten:
+  dutch: eten
+  english: eat
+  preposition:
+  ovt_me: at
+  ovt_you: aten
+  vtt_verb: hebben
+  vtt_conjugated: gegeten
 
-two:
-  dutch: MyString
-  english: MyString
-  preposition: MyString
-  ovt_me: MyString
-  ovt_you: MyString
-  vtt_verb: MyString
-  vtt_conjugated: MyString
+slapen:
+  dutch: slapen
+  english: sleep
+  preposition:
+  ovt_me: sliep
+  ovt_you: sliepen
+  vtt_verb: hebben
+  vtt_conjugated: geslapen

@@ -3,21 +3,19 @@ require 'test_helper'
 class VerbsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
-    assert_response :success
   end
 
   test "should get create" do
-    get :create
-    assert_response :success
+    post :create, verb: {dutch: 'spelen', english: 'play', ovt_me: 'speelde', ovt_you: 'speelden', vtt_verb: 'hebben', vtt_conjugated: 'gespeeld'}
   end
 
   test "should get update" do
-    get :update
+    get :update, id: verbs(:eten).id
     assert_response :success
   end
 
   test "should get destroy" do
-    get :destroy
+    delete :destroy, id: verbs(:eten).id
     assert_response :success
   end
 
