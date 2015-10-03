@@ -1,5 +1,6 @@
 <% if @ik_correct && @wij_correct %>
   $('.icon-check').html('<i class="fa fa-check icon-success"></i>');
+  $('.error-message').html('');
 <% else %>
   $('.icon-check').html('<i class="fa fa-close icon-error"></i>');
   $('.error-message').html('The correct answer was:');
@@ -10,6 +11,7 @@
     $('.error-message').append(' wij <%= @old_verb.ovt_you %>');
   <% end %>
 <% end %>
+$('.icon-check').fadeIn();
 setTimeout(fade_out, 2000);
 
 $('.word').text('<%= @verb.dutch %>');
