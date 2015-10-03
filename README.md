@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/lienvdsteen/werkwoorden.svg?branch=master)](https://travis-ci.org/lienvdsteen/werkwoorden)
+[![Heroku](https://heroku-badge.herokuapp.com/?app=werkwoorden-nl)](https://werkwoorden-nl.herokuapp.com/)
+
 To work on this project:
 - `git clone git@github.com:lienvdsteen/werkwoorden.git`
 - `cd werkwoorden`
