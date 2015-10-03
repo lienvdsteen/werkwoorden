@@ -36,6 +36,6 @@ class TestController < ApplicationController
   end
 
   def set_verb
-    @verb = Verb.all.sort_by{rand}.first
+    @verb = Verb.all.sort_by{ rand }.first
   end
 end
