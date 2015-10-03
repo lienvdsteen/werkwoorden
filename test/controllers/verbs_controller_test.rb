@@ -6,7 +6,7 @@ class VerbsControllerTest < ActionController::TestCase
   end
 
   test 'should get create' do
-    post :create, verb: {dutch: 'spelen', english: 'play', ovt_me: 'speelde', ovt_you: 'speelden', vtt_verb: 'hebben', vtt_conjugated: 'gespeeld'}
+    post :create, verb: { dutch: 'spelen', english: 'play', ovt_me: 'speelde', ovt_you: 'speelden', vtt_verb: 'hebben', vtt_conjugated: 'gespeeld' }
   end
 
   test 'should get update' do
